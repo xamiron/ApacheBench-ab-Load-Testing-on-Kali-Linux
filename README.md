@@ -6,33 +6,33 @@ A professional and visually enhanced **README.md** for performing load testing w
 
 ## 📘 Table of Contents
 
-1. 🔍 Overview
-2. ⚙️ Requirements
-3. 💾 Installation
-4. 🧠 Basic Commands
-5. 🚀 Test Types & Examples
+1. Overview
+2. Requirements
+3. Installation
+4. Basic Commands
+5. Test Types & Examples
 
    * Smoke Test
    * Progressive Ramp-Up Test
    * Soak Test
    * Spike Test
-6. 📊 Monitoring During Tests
-7. 📈 Interpreting Key Metrics
-8. 🧾 Sample Output
-9. 🧩 Best Practices & Safety
-10. 🪪 License
+6. Monitoring During Tests
+7. Interpreting Key Metrics
+8. Sample Output
+9. Best Practices & Safety
+10. License
 
----
 
-## 🔍 Overview
+
+##  Overview
 
 **ApacheBench (ab)** is a lightweight, command-line HTTP benchmarking tool that comes bundled with the `apache2-utils` package. It's perfect for measuring performance metrics such as Requests Per Second (RPS), response times, throughput, and error rates.
 
-> 💡 **Tip:** ApacheBench is great for single-host testing and early-stage performance validation. For distributed or high-scale load tests, consider using `k6`, `wrk2`, or `Gatling`.
+>  **Tip:** ApacheBench is great for single-host testing and early-stage performance validation. For distributed or high-scale load tests, consider using `k6`, `wrk2`, or `Gatling`.
 
----
 
-## ⚙️ Requirements
+
+##  Requirements
 
 | Component            | Details                                          |
 | -------------------- | ------------------------------------------------ |
@@ -43,9 +43,8 @@ A professional and visually enhanced **README.md** for performing load testing w
 | **Network**          | 100 Mbps Broadband                               |
 | **Monitoring Tools** | `top`, `vmstat`, `iostat`, `ss`, and server logs |
 
----
 
-## 💾 Installation
+##  Installation
 
 ```bash
 sudo apt update
@@ -60,7 +59,7 @@ ab -V
 
 ---
 
-## 🧠 Basic Commands
+##  Basic Commands
 
 Run a quick test with 100 requests and 10 concurrent users:
 
@@ -86,9 +85,9 @@ ab -n 10000 -c 1000 https://www.example.com/ > ab_report.txt
 
 ---
 
-## 🚀 Test Types & Examples
+##  Test Types & Examples
 
-### 🟢 1. Smoke Test — Connectivity & Baseline
+###  1. Smoke Test — Connectivity & Baseline
 
 ```bash
 ab -n 100 -c 5 https://www.example.com/
@@ -98,7 +97,7 @@ Purpose: Verify basic server connectivity and baseline performance.
 
 ---
 
-### 🟡 2. Progressive Ramp-Up Test — Scaling Behavior
+###  2. Progressive Ramp-Up Test — Scaling Behavior
 
 ```bash
 ab -n 5000 -c 50 https://www.example.com/
@@ -111,7 +110,7 @@ Purpose: Identify the point where latency or error rate increases significantly.
 
 ---
 
-### 🔵 3. Soak Test — Long-Term Stability
+###  3. Soak Test — Long-Term Stability
 
 ```bash
 ab -c 200 -t 1800 https://www.example.com/
@@ -121,7 +120,7 @@ Run for 30–60 minutes to detect memory leaks or slow degradation.
 
 ---
 
-### 🔴 4. Spike Test — Sudden Surge Handling
+###  4. Spike Test — Sudden Surge Handling
 
 ```bash
 # Gradual baseline
@@ -134,7 +133,7 @@ Simulates flash traffic or sudden spikes to test resilience.
 
 ---
 
-## 📊 Monitoring During Tests
+##  Monitoring During Tests
 
 **On Kali (Client):**
 
@@ -153,7 +152,7 @@ ss -s         # Network connections
 
 ---
 
-## 📈 Interpreting Key Metrics
+## Interpreting Key Metrics
 
 | Metric                        | Description                         |
 | ----------------------------- | ----------------------------------- |
@@ -167,7 +166,7 @@ ss -s         # Network connections
 
 ---
 
-## 🧾 Sample Output
+## Sample Output
 
 ```
 This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
@@ -193,7 +192,7 @@ Transfer rate:          39.87 [Kbytes/sec]
 
 ---
 
-## 🧩 Best Practices & Safety
+##  Best Practices & Safety
 
 ✅ Always test on staging or pre-production
 ✅ Monitor both client & server metrics
@@ -204,7 +203,7 @@ Transfer rate:          39.87 [Kbytes/sec]
 ---
 
 
-## 🪪 License
+## License
 
 **MIT License © 2025 xamiron**
 Feel free to copy, modify, and share.
