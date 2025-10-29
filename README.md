@@ -20,8 +20,7 @@ A professional and visually enhanced **README.md** for performing load testing w
 7. 📈 Interpreting Key Metrics
 8. 🧾 Sample Output
 9. 🧩 Best Practices & Safety
-10. 💻 Add This README to GitHub
-11. 🪪 License
+10. 🪪 License
 
 ---
 
